@@ -1,0 +1,18 @@
+[
+   {
+      "ParameterKey": "APIName",
+      "ParameterValue": "automatically-created-api"
+   },
+   {
+      "ParameterKey": "LambdaCodeBucket",
+      "ParameterValue": "cfn-simple-lambda-api-code"
+   },
+   {
+      "ParameterKey": "LambdaCodePath",
+      "ParameterValue": "cloudformation-template-for-lambda-backed-api-gateway-with-dynamodb.zip"
+   },
+   {
+      "ParameterKey": "APIGatewayCustomResourceARN",
+      "ParameterValue": "arn:aws:lambda:us-east-1:123456789012:function:APIGatewayCustomResource-LambdaFunction-ABCDEFGHIJ123"
+   }
+]

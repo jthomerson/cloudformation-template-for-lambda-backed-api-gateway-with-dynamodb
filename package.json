@@ -1,0 +1,26 @@
+{
+  "name": "cloudformation-template-for-lambda-backed-api-gateway-with-dynamodb",
+  "version": "1.0.0",
+  "description": "An example of how to create a Lambda-backed API on AWS using API Gateway, calling your Lambda code, which uses a DynamoDB table for storage, using CloudFormation to automate the entire deployment of the API and all its pieces.",
+  "main": "src/index.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-zip": "0.17.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jthomerson/cloudformation-template-for-lambda-backed-api-gateway-with-dynamodb.git"
+  },
+  "author": "Jeremy Thomerson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jthomerson/cloudformation-template-for-lambda-backed-api-gateway-with-dynamodb/issues"
+  },
+  "homepage": "https://github.com/jthomerson/cloudformation-template-for-lambda-backed-api-gateway-with-dynamodb#readme"
+}
