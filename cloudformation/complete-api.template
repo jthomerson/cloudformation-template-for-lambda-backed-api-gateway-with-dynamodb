@@ -251,7 +251,7 @@
                         { "Ref": "AWS::Region" },
                         { "Ref": "AWS::AccountId" },
                         "function",
-                        { "Fn::Join": [ "/", [ { "Ref": "APIName" }, "invocations" ] ] }
+                        { "Fn::Join": [ "/", [ { "Fn::Join": [ "-", [ { "Ref": "AWS::StackName" }, { "Ref": "APIName" } ] ] }, "invocations" ] ] }
                      ]
                   ]
                },
