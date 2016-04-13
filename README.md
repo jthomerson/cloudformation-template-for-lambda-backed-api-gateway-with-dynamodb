@@ -20,7 +20,17 @@ the following and relate all of them to one another as needed:
 
 ## Why?
 
-Because it can be really tough getting all of this set up on your own.
+Because it can be really tough getting all of this set up on your own. There
+are a number of examples of individual pieces, but I couldn't find examples of
+how to wire all of them together.
+
+The goal of this repo is that you can have a single repo that contains the
+Lambda code for the service, as well as the configuration for provisioning the
+service. The hope is that you could add automated unit testing, and if that
+passed, the same repo could build your dev environment, potentially run
+integration tests, and then either automatically or manually deploy the API.
+Automating all of this will greatly simplify things if your desire is to build
+self-contained serverless microservices.
 
 
 ## How to Use It
@@ -48,3 +58,18 @@ aws cloudformation describe-stacks --query='Stacks[*].{ Name: StackName, Status:
 ## License
 
 This software is released under the MIT license. See [the license file](LICENSE) for more details.
+
+Feel free to take the template and modify it for your own use.
+
+
+## Contributing
+
+At this point I don't have my normal [jshint](http://jshint.com/),
+[jscs](http://jscs.info/), [Travis CI](https://travis-ci.org/) stack integrated
+in this repo. I also don't have unit testing - something I hope to add in the
+future. So, I don't have a way you can automatically validate your
+contributions. That said, if you want to contribute, please submit a pull
+request, but only after doing the following:
+
+ 1. Make sure your code follows the coding standards that are in the file(s) you are editing (e.g. three space indentation, never a tab, never trailing whitespace).
+ 2. (Obviously) Run your code and make sure that you can actually build a working stack with it.
