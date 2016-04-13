@@ -206,7 +206,9 @@
                },
                "httpMethod": "POST",
                "requestTemplates": {
-                  "application/json": "{\"statusCode\": 200}"
+                  "application/json": [ "input-pass-through-full", {
+                     "DynamoDBTableName": { "Ref": "APIDynamoDBTable" }
+                  } ]
                },
                "requestParameters": {
                   "integration.request.querystring.sortBy": "'hardcodedValue'"
@@ -257,7 +259,9 @@
                },
                "httpMethod": "POST",
                "requestTemplates": {
-                  "application/json": "{\"statusCode\": 200}"
+                  "application/json": [ "input-pass-through-full", {
+                     "DynamoDBTableName": { "Ref": "APIDynamoDBTable" }
+                  } ]
                },
                "requestParameters": {
                   "integration.request.querystring.sortBy": "'hardcodedValue'"
@@ -299,21 +303,21 @@
          "Properties": {
             "AttributeDefinitions": [
                {
-                  "AttributeName": "SomeAttribute",
+                  "AttributeName": "GUID",
                   "AttributeType": "S"
                },
                {
-                  "AttributeName": "SomeRangeAttribute",
+                  "AttributeName": "DueDate",
                   "AttributeType": "S"
                }
             ],
             "KeySchema": [
                {
-                  "AttributeName": "SomeAttribute",
+                  "AttributeName": "GUID",
                   "KeyType": "HASH"
                },
                {
-                  "AttributeName": "SomeRangeAttribute",
+                  "AttributeName": "DueDate",
                   "KeyType": "RANGE"
                }
             ],
